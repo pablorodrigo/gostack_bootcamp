@@ -1,0 +1,11 @@
+#Allow all developer use the same config for differences Editors
+#Maintain standardization
+
+root = true
+
+[*]
+charset = utf-8
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true

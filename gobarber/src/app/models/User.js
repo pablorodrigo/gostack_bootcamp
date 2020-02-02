@@ -1,4 +1,4 @@
-import Sequelize, { Model } from 'sequelize';
+import Sequelize, {Model} from 'sequelize';
 
 // crypy password
 import bcrypt from 'bcryptjs';
@@ -27,6 +27,11 @@ class User extends Model {
     });
 
     return this;
+  }
+
+  // methods
+  checkPassword(password) {
+    return bcrypt.compare(password, this.password_hash);
   }
 }
 

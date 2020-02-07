@@ -4,7 +4,7 @@ import Sequelize, { Model } from 'sequelize';
 import bcrypt from 'bcryptjs';
 
 class User extends Model {
-  // fi lds possible to register
+  // fields possible to register
   static init(sequelize) {
     super.init(
       {

@@ -16,13 +16,14 @@ class UserSessionController {
       return response.status(401).json({ error: 'Password does not match' });
     }
 
-    const { id, name } = user;
+    const { id, name, administrator } = user;
 
     return response.json({
       user: {
         id,
         name,
         email,
+        administrator,
       },
       token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,

@@ -25,7 +25,7 @@ class UserSessionController {
         email,
         administrator,
       },
-      token: jwt.sign({ id }, authConfig.secret, {
+      token: jwt.sign({ id, administrator }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
       }),
     });

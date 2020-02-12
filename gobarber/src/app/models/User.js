@@ -1,4 +1,4 @@
-import Sequelize, {Model} from 'sequelize';
+import Sequelize, { Model } from 'sequelize';
 
 // crypy password
 import bcrypt from 'bcryptjs';
@@ -30,6 +30,11 @@ class User extends Model {
   }
 
   // methods
+
+  static associate(models) {
+    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
+  }
+
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }

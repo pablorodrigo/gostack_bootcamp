@@ -10,6 +10,7 @@ import UserSessionController from './app/controllers/UserSessionController';
 import RecipientController from './app/controllers/RecipientController';
 import DeliveryManController from './app/controllers/DeliveryManController';
 import FileController from './app/controllers/FileController';
+import DeliveryController from './app/controllers/DeliveryController';
 
 const routes = new Router();
 const upload = multer(multerConfig);
@@ -30,5 +31,10 @@ routes.get('/deliverymen', DeliveryManController.index);
 routes.post('/deliverymen', DeliveryManController.store);
 routes.put('/deliverymen/:id', DeliveryManController.update);
 routes.delete('/deliverymen/:id', DeliveryManController.delete);
+// deliveries
+routes.get('/deliveries', DeliveryController.index);
+routes.post('/deliveries', DeliveryController.store);
+routes.put('/deliveries/:id', DeliveryController.update);
+routes.delete('/deliveries/:id', DeliveryController.delete);
 
 export default routes;

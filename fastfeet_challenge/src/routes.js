@@ -11,11 +11,31 @@ import RecipientController from './app/controllers/RecipientController';
 import DeliveryManController from './app/controllers/DeliveryManController';
 import FileController from './app/controllers/FileController';
 import DeliveryController from './app/controllers/DeliveryController';
+import DeliveryManDeliveriesController from './app/controllers/DeliveryManDeliveriesController';
+import DeliveryManDeliveriesEndController from './app/controllers/DeliveryManDeliveriesEndController';
 
 const routes = new Router();
 const upload = multer(multerConfig);
 
 routes.post('/sessions', UserSessionController.store);
+
+// delivery status
+routes.get(
+  '/deliveryman_deliveries/:id',
+  DeliveryManDeliveriesController.index
+);
+routes.get(
+  '/deliveryman/:id/deliveries',
+  DeliveryManDeliveriesController.index
+);
+routes.put(
+  '/deliveryman_deliveries/:id',
+  DeliveryManDeliveriesController.update
+);
+routes.put(
+  '/deliveryman_deliveries_end/:id',
+  DeliveryManDeliveriesEndController.update
+);
 
 // middleware to avoid user to through next routes
 routes.use(authMiddleware);

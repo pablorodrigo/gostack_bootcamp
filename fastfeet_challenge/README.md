@@ -26,6 +26,14 @@
 
 [delivery_email]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/delivery_email.PNG "Delivery email"
 
+[deliveryman_index]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveryman_index.PNG "Delivery list"
+
+[deliveryman_store]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveryman_store.PNG "Delivery created"
+
+[deliveryman_update]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveryman_update.PNG "Delivery updated"
+
+[deliveryman_delete]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveryman_delete.PNG "Delivery deleted"
+
 
 
 
@@ -50,6 +58,18 @@
 # Bootcamp challange part 2 / 4
 
 [Description here](https://github.com/Rocketseat/bootcamp-gostack-desafio-03)
+
+### DeliveryMan list
+![alt text][deliveryman_index]
+
+### DeliveryMan create
+![alt text][deliveryman_store]
+
+### DeliveryMan update
+![alt text][deliveryman_update]
+
+### DeliveryMan delete
+![alt text][deliveryman_delete]
 
 ### Delivery create
 ![alt text][delivery_store]

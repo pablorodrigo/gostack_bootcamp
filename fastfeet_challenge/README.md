@@ -4,17 +4,17 @@
 
 # Screenshots - tests Insomnia
 
-[login_success]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge_1/screenshots/login_success.PNG "Login Success"
+[login_success]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/login_success.PNG "Login Success"
 
-[error_check_user_exist]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge_1/screenshots/error_check_user_exist.PNG "Feedback when user not exist"
+[error_check_user_exist]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/error_check_user_exist.PNG "Feedback when user not exist"
 
-[error_check_password]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge_1/screenshots/error_check_password.PNG "Feedback when login password not match"
+[error_check_password]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/error_check_password.PNG "Feedback when login password not match"
 
-[recipient_check_fields]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge_1/screenshots/recipient_check_fields.PNG "Check Recipient fields"
+[recipient_check_fields]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/recipient_check_fields.PNG "Check Recipient fields"
 
-[recipient_check_fields_exist]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge_1/screenshots/recipient_check_fields_exist.PNG "Check if Recipient exist in DB"
+[recipient_check_fields_exist]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/recipient_check_fields_exist.PNG "Check if Recipient exist in DB"
 
-[recipient_store]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge_1/screenshots/recipient_store.PNG "New Recipient"
+[recipient_store]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/recipient_store.PNG "New Recipient"
 
 
 #### Login Success

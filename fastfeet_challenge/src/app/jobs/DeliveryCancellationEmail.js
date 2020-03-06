@@ -6,21 +6,20 @@ import { format, parseISO } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import Mail from '../lib/Mail';
 
-class DeliveryEmail {
+class DeliveryCancellationEmail {
   get key() {
-    return 'DeliveryEmail';
+    return 'DeliveryCancellationEmail';
   }
 
   async handle({ data }) {
     const { deliveryman, product, date } = data;
 
-    console.log('created a queue - DeliveryEmail');
+    console.log('created a queue - DeliveryCancellationEmail');
 
     await Mail.sendMail({
       to: `${deliveryman.name} <${deliveryman.email}>`,
-      subject: 'Novo pedido',
-      // text: 'Voce tem um novo cancelamento',
-      template: 'newdelivery',
+      subject: 'Entrega cancelada',
+      template: 'delivery_cancelled',
       context: {
         deliveryman_name: deliveryman.name,
         product,
@@ -32,4 +31,4 @@ class DeliveryEmail {
   }
 }
 
-export default new DeliveryEmail();
+export default new DeliveryCancellationEmail();

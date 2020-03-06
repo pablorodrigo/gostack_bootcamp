@@ -34,7 +34,15 @@
 
 [deliveryman_delete]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveryman_delete.PNG "Delivery deleted"
 
+[deliveries_delivered]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveries_delivered.PNG "List of deliveries finished by deliverman"
 
+[deliveries_not_delivered]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveries_not_delivered.PNG "Delivery not delivered"
+
+[deliveries_end]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveries_end.PNG "Delivery closed"
+
+[deliveries_start]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveries_start.PNG "Delivery started"
+
+[deliveries_warning]: https://github.com/pablorodrigo/gostack_bootcamp/blob/master/fastfeet_challenge/screenshots/deliveries_warning.PNG "Delivery warning"
 
 
 #### Login Success
@@ -85,3 +93,19 @@
 
 ### Delivery delete
 ![alt text][delivery_delete]
+
+### List of deliveries
+![alt text][deliveries_not_delivered]
+
+### List of  Delivery finished by deliverman
+![alt text][deliveries_delivered]
+
+### DeliveryMan starting a delivery
+![alt text][deliveries_start]
+
+### Warning if is not possible do start a delivery
+![alt text][deliveries_warning]
+
+### DeliveryMan closing a delivery
+![alt text][deliveries_end]
+

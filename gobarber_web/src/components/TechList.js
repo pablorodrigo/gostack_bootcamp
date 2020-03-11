@@ -6,12 +6,29 @@ class TechList extends Component {
 
     state = {
         newTech: '',
-        techs: [
-            'Node.js',
-            'ReactJS',
-            'React Native'
-        ]
+        techs: []
     };
+
+    // executed when the component is display
+    componentDidMount() {
+
+        // recovery data saved
+        const techs = localStorage.getItem('techs')
+        if (techs){
+            this.setState({techs: JSON.parse(techs)})
+        }
+    }
+
+    // executed when there is a change at props or states
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps !== this.state.techs){
+            localStorage.setItem('techs', JSON.stringify(this.state.techs))
+        }
+    }
+
+    // executed when the component does not exist anymore
+    componentWillUnmount() {
+    }
 
     // arrow function is required to access 'this' variable
     handleInputChange = e => {
@@ -59,6 +76,7 @@ class TechList extends Component {
                                       onDelete={() => this.handleDelete(tech)}/>
 
                         ))}
+
                     </ul>
 
                     <input type="text"

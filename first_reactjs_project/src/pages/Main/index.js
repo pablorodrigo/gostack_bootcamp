@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import {FaGithubAlt, FaPlus, FaSpinner} from 'react-icons/fa';
+import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import {Container, Form, SubmitButton, List} from './styles';
+import { Container, Form, SubmitButton, List } from './styles';
 
 import api from '../../services/api';
 
@@ -20,13 +20,13 @@ export default class Main extends Component {
         const repositories = localStorage.getItem('repositories');
 
         if (repositories) {
-            this.setState({repositories: JSON.parse(repositories)});
+            this.setState({ repositories: JSON.parse(repositories) });
         }
     }
 
     // save date in localStorage
     componentDidUpdate(prevProps, prevState, snapshot) {
-        const {repositories} = this.state;
+        const { repositories } = this.state;
 
         if (prevState.repositories !== repositories) {
             localStorage.setItem('repositories', JSON.stringify(repositories));
@@ -34,16 +34,16 @@ export default class Main extends Component {
     }
 
     handleInputChange = event => {
-        this.setState({newRepo: event.target.value});
+        this.setState({ newRepo: event.target.value });
     };
 
     handleSubmit = async event => {
         // avoid page refresh
         event.preventDefault();
 
-        this.setState({loading: true});
+        this.setState({ loading: true });
 
-        const {newRepo, repositories} = this.state;
+        const { newRepo, repositories } = this.state;
 
         const response = await api.get(`/repos/${newRepo}`);
 
@@ -59,25 +59,20 @@ export default class Main extends Component {
     };
 
     render() {
-        const {newRepo, loading, repositories} = this.state;
+        const { newRepo, loading, repositories } = this.state;
 
         return (
             <Container>
                 <h1>
-                    <FaGithubAlt/>
+                    <FaGithubAlt />
                     Repository
                 </h1>
 
                 <Form onSubmit={this.handleSubmit}>
-                    <input type="text"
-                           placeholder="Add repo"
-                           value={newRepo}
-                           onChange={this.handleInputChange}/>
+                    <input type="text" placeholder="Add repo" value={newRepo} onChange={this.handleInputChange} />
 
                     <SubmitButton loading={loading}>
-                        {loading ? <FaSpinner color="#FFF"
-                                              size={14}/> : <FaPlus color="#FFF"
-                                                                    size={14}/>}
+                        {loading ? <FaSpinner color="#FFF" size={14} /> : <FaPlus color="#FFF" size={14} />}
                     </SubmitButton>
                 </Form>
 

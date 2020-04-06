@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
-
-import {Container} from './styles';
+import { Button } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Container, Form, Input, SubmitButton } from './styles';
 
 export default function Main({ navigation }) {
   function thisToUsers() {
@@ -10,7 +10,14 @@ export default function Main({ navigation }) {
 
   return (
     <Container>
-      <Text>Main</Text>
+      <Form>
+        <Input autoCorret={false} autoCapitalize="none" placeholder='Add user' />
+
+        <SubmitButton>
+          <Icon name="add" size={20} color="#fff" />
+        </SubmitButton>
+      </Form>
+
       <Button title="Navigate to Users" onPress={thisToUsers} />
     </Container>
   );

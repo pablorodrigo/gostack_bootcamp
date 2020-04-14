@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Keyboard, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -25,23 +26,31 @@ export default class Main extends Component {
     loading: false,
   };
 
+  // fields validation
+  static propTypes = {
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func,
+    }),
+  };
+
   // get data
-  async componentDidMount() {
+  componentDidMount = async () => {
+    console.tron.log(this.props);
     const users = await AsyncStorage.getItem('users');
 
     if (users) {
       this.setState({ users: JSON.parse(users) });
     }
-  }
+  };
 
   // update data
-  async componentDidUpdate(_, prevState) {
+  componentDidUpdate = async (_, prevState) => {
     const { users } = this.state;
 
     if (prevState.users !== users) {
       await AsyncStorage.setItem('users', JSON.stringify(users));
     }
-  }
+  };
 
   handleAddUser = async () => {
     console.tron.log(this.state.newUser);
@@ -74,9 +83,13 @@ export default class Main extends Component {
     Keyboard.dismiss();
   };
 
-  /* function thisToUsers() {
-    navigation.navigate('User');
-  } */
+  // navigate to user page
+  thisToUsers = (user) => {
+    const { navigation } = this.props;
+
+    navigation.navigate('User', { user });
+  };
+
   render() {
     const { users, newUser, loading } = this.state;
 
@@ -108,14 +121,12 @@ export default class Main extends Component {
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
 
-              <ProfileButton onPress={() => {}}>
+              <ProfileButton onPress={() => this.thisToUsers(item)}>
                 <ProfileButtonText>Check perfil</ProfileButtonText>
               </ProfileButton>
             </User>
           )}
         />
-
-        {/* <Button title="Navigate to Users" onPress={thisToUsers} /> */}
       </Container>
     );
   }

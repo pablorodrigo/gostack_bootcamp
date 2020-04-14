@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 export default function Routes() {
   return (
     <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: '#7159c1' }, headerTintColor: '#ffffff' }}>
-      <Stack.Screen name="Main" component={Main} options={{ title: 'Main' }} />
+      <Stack.Screen name="Main" component={Main} options={{ title: 'Users' }} />
       <Stack.Screen name="User" component={User} />
     </Stack.Navigator>
   );
